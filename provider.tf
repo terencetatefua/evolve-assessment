@@ -1,4 +1,12 @@
 terraform {
+  backend "s3" {
+    bucket         = "evolve-assesment"
+    key            = "evolve-assemnet/terraform/remote/s3/terraform.tfstate"
+    region         = "us-east-2"
+    dynamodb_table = "dynamodb-state-locking"
+    encrypt        = true
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
