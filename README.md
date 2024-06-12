@@ -50,3 +50,30 @@ No modules.
 ## Outputs
 
 No outputs.
+
+
+## Docker and Helm Chart Explanation Summary
+Dockerfile:
+
+Base Image: Uses the official Python 3.9 slim image.
+Working Directory: Sets the working directory to /app.
+Copy Files: Copies the current directory contents into the container.
+Install Dependencies: Installs Flask using requirements.txt.
+Expose Port: Exposes port 5000.
+Run Application: Runs app.py when the container launches.
+requirements.txt:
+
+Lists the Python dependencies, specifically Flask (Flask==2.0.3).
+Helm Chart:
+
+Chart.yaml: Contains metadata about the Helm chart, including name, description, and version.
+values.yaml: Defines default configuration values for the image repository, tag, service type, and ingress settings.
+templates/deployment.yaml: Defines the Kubernetes Deployment, specifying the number of replicas, container image, and environment variables.
+templates/service.yaml: Defines the Kubernetes Service to expose the application, with configurable service type and port.
+templates/ingress.yaml (optional): Defines an Ingress resource to manage external access to the application, with customizable host and path settings.
+This setup containerizes a Flask application using Docker and provides a Helm chart for deploying the Docker image to a Kubernetes cluster, ensuring a consistent and scalable deployment process.
+
+
+
+
+

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: evolve-devops-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: evolve-devops-app
+  template:
+    metadata:
+      labels:
+        app: evolve-devops-app
+    spec:
+      containers:
+        - name: evolve-devops-app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 5000
+          env:
+            - name: PORT
+              value: "5000"
