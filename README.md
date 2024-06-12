@@ -1,4 +1,11 @@
+## Resource Explanation
+The provider block sets up AWS as the provider.
+The aws_s3_bucket resource creates an S3 bucket.
+The aws_s3_bucket_server_side_encryption_configuration resource enables AES256 encryption on the bucket.
+The aws_s3_bucket_policy resource applies a policy that denies requests that are not using HTTPS.
+
 ## Requirements
+
 
 | Name | Version |
 |------|---------|
