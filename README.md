@@ -1,8 +1,20 @@
 ## Resource Explanation
-The provider block sets up AWS as the provider.
-The aws_s3_bucket resource creates an S3 bucket.
-The aws_s3_bucket_server_side_encryption_configuration resource enables AES256 encryption on the bucket.
-The aws_s3_bucket_policy resource applies a policy that denies requests that are not using HTTPS.
+Provider Configuration
+The provider block configures AWS as the provider, specifying the region where resources will be deployed. By using a variable (var.aws_region), the configuration is made flexible and reusable across different AWS regions.
+
+S3 Bucket Creation
+The aws_s3_bucket resource creates an S3 bucket using a variable for the bucket name (var.s3_bucket_name). This ensures easy customization and reuse of the configuration. S3 buckets offer high durability and scalability, providing a reliable storage solution.
+
+Server-Side Encryption
+The aws_s3_bucket_server_side_encryption_configuration resource enables server-side encryption using the AES256 algorithm. This ensures that all objects stored in the bucket are encrypted at rest, enhancing data security and compliance with industry standards. Encryption is applied by default to simplify user and application interactions.
+
+HTTPS Enforcement Policy
+The aws_s3_bucket_policy resource attaches a policy to the S3 bucket that enforces the use of HTTPS. This policy denies any requests that do not use secure transport, ensuring that all data transmitted to and from the bucket is encrypted in transit. This critical security measure protects data from being intercepted or tampered with during transfer.
+
+Key Points
+Security: Emphasizes encryption at rest and in transit, demonstrating a strong focus on data protection.
+Modularity and Reusability: Uses variables for configuration flexibility, promoting best practices in infrastructure as code.
+
 
 ## Requirements
 
