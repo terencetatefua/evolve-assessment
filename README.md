@@ -1,20 +1,16 @@
 ## Resource Explanation
-Provider Configuration
-The provider block configures AWS as the provider, specifying the region where resources will be deployed. By using a variable (var.aws_region), the configuration is made flexible and reusable across different AWS regions.
+Provider Configuration: Configures AWS as the provider using a variable (var.aws_region) for flexible and reusable region settings.
 
-S3 Bucket Creation
-The aws_s3_bucket resource creates an S3 bucket using a variable for the bucket name (var.s3_bucket_name). This ensures easy customization and reuse of the configuration. S3 buckets offer high durability and scalability, providing a reliable storage solution.
+S3 Bucket Creation: Creates an S3 bucket with a variable (var.s3_bucket_name) for easy customization and reuse, ensuring high durability and scalability.
 
-Server-Side Encryption
-The aws_s3_bucket_server_side_encryption_configuration resource enables server-side encryption using the AES256 algorithm. This ensures that all objects stored in the bucket are encrypted at rest, enhancing data security and compliance with industry standards. Encryption is applied by default to simplify user and application interactions.
+Server-Side Encryption: Enables AES256 server-side encryption for the S3 bucket, ensuring data security and compliance by default.
 
-HTTPS Enforcement Policy
-The aws_s3_bucket_policy resource attaches a policy to the S3 bucket that enforces the use of HTTPS. This policy denies any requests that do not use secure transport, ensuring that all data transmitted to and from the bucket is encrypted in transit. This critical security measure protects data from being intercepted or tampered with during transfer.
+HTTPS Enforcement Policy: Attaches a policy to the S3 bucket enforcing HTTPS, protecting data in transit by denying insecure requests.
 
-Key Points
-Security: Emphasizes encryption at rest and in transit, demonstrating a strong focus on data protection.
-Modularity and Reusability: Uses variables for configuration flexibility, promoting best practices in infrastructure as code.
+Key Points:
 
+Security: Emphasizes encryption at rest and in transit.
+Modularity and Reusability: Uses variables to promote best practices in infrastructure as code.
 
 ## Requirements
 
