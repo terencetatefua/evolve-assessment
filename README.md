@@ -70,8 +70,11 @@ Chart.yaml: Contains metadata about the Helm chart, including name, description,
 values.yaml: Defines default configuration values for the image repository, tag, service type, and ingress settings.
 templates/deployment.yaml: Defines the Kubernetes Deployment, specifying the number of replicas, container image, and environment variables.
 templates/service.yaml: Defines the Kubernetes Service to expose the application, with configurable service type and port.
-templates/ingress.yaml (optional): Defines an Ingress resource to manage external access to the application, with customizable host and path settings.
 This setup containerizes a Flask application using Docker and provides a Helm chart for deploying the Docker image to a Kubernetes cluster, ensuring a consistent and scalable deployment process.
+
+Access: Application available at https://evolve.tamisbaj.com/.
+
+
 
 
 
