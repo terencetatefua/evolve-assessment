@@ -64,6 +64,7 @@ Run Application: Runs app.py when the container launches.
 requirements.txt:
 
 Lists the Python dependencies, specifically Flask (Flask==2.0.3).
+
 Helm Chart:
 
 Chart.yaml: Contains metadata about the Helm chart, including name, description, and version.
